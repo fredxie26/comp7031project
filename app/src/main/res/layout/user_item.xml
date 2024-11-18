@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:id="@+id/image_star"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/star_grey"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/image_profile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_toEndOf="@id/image_star"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/cat"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/image_profile"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true">
+
+        <!-- User Info (Name, Address) -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"> <!-- Added weight to take available space -->
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Name: New User" />
+
+            <TextView
+                android:id="@+id/text_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/status_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:entries="@array/status_options" />
+        </LinearLayout>
+
+        <!-- Spinner (Status) -->
+
+
+        <!-- Delete Button (on the right) -->
+        <ImageButton
+            android:id="@+id/button_delete"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_recycle_bin"
+            android:contentDescription="Delete User"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:scaleType="centerInside"
+            android:padding="10dp"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+</RelativeLayout>

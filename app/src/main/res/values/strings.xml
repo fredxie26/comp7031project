@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">comp7031project</string>
+
+    <string-array name="status_options">
+        <item>in_progress</item>
+        <item>complete</item>
+        <item>start</item>
+    </string-array>
+</resources>
